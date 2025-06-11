@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/header :: head}"></head>
+<body class="d-flex flex-column min-vh-100">
+<div th:replace="~{fragments/menu :: menu}"></div>
+	<div class="container">
+			<div class="row">
+				<h1>Lista de Categorías</h1>
+				<hr />
+			</div>
+			<table class="table table-hover border-primary mt-3">
+				<thead class="table-primary">
+					<tr>
+						<th scope="col">CATEGORIAS</th>
+						<th scope="col">ESTADO</th>
+						<th scope="col">Acción</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="cat: ${cats}">
+						<td th:text="${cat.nombre}"></td>
+						<td th:text="${cat.estado}"></td>
+						<td>
+							fdgfg
+						</td>
+					</tr>
+					
+				</tbody>
+			</table>
+		</div>
+	<head th:replace="~{fragments/footer :: footer}"></head>
+</body>
+
+</html>
